@@ -1,0 +1,26 @@
+.user-details{
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 2px #003768;/*#3333cc;#008000;#cc3300*/
+}
+
+.user-name{
+    /* color:#0570a6; */
+    color: #990033;
+}
+
+td{
+    width: 50%;
+  padding-left: 200px !important;
+}
+
+.fit{
+    
+    position: fixed;
+  border-radius:50%;
+  
+}
+
+.imgfit{
+    padding-bottom:50% ;
+}

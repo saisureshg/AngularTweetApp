@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color:white" routerLink=''>Tweet App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <ul class="navbar-nav mr-auto">
+
+          <li class=" dropdown nav-item" >
+            <a  class="dropbtn nav-link"  *ngIf="loggedIn()">Tweet Options </a>
+            <div class="dropdown-content">
+              <li class="nav-item">
+                <a class="nav-link" routerLink='/my-tweets' routerLinkActive='active' *ngIf="loggedIn()">User Tweets </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink='/all-tweets' routerLinkActive='active' *ngIf="loggedIn()">Tweets </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink='/users' routerLinkActive='active' *ngIf="loggedIn()"> Users List</a>
+              </li>
+            </div>
+          </li>
+
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink='/my-tweets' routerLinkActive='active' *ngIf="loggedIn()">My Tweets |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/all-tweets' routerLinkActive='active' *ngIf="loggedIn()">All Tweets |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/users' routerLinkActive='active' *ngIf="loggedIn()">All Users</a>
+          </li> -->
+        </ul >
+        <div *ngIf="loggedIn()" class="" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link"  routerLink='/post-tweet' routerLinkActive='active' *ngIf="loggedIn()"> Post Tweet </a>
+            </li>
+            <li class=" dropdown nav-item" >
+              <a href="#" class="dropbtn nav-link">Settings </a>
+              <div class="dropdown-content">
+                  <a class="nav-link"  (click)="resetPassword()" routerLinkActive='active' *ngIf="loggedIn()">Reset Password </a>
+                  <a class="nav-link"  (click)="logout()" routerLinkActive='active' *ngIf="loggedIn()">Sign out</a>
+              </div>
+            </li>
+        </ul>
+
+
+        </div>.
+
+        <div>
+          <ul class="navbar-nav navbar-nav pull-right">
+            <li class="nav-item" class="float">
+              <a class="nav-link"
+              routerLink='/login' routerLinkActive='active' *ngIf="!loggedIn()">Sign In</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" routerLink='/register' routerLinkActive='active' *ngIf="!loggedIn()">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

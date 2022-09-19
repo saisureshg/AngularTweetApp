@@ -1,0 +1,91 @@
+<table>
+	<tr>
+		<td>
+			<img src="assets/login.jpg" width="500" height="400" >
+		
+		</td>
+		<td>
+<div class ="bg">
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card"> 
+			<div class="card-header">
+				<h3>Sign In</h3>
+				<!-- <img src="assets/image.jpg"> -->
+				<!-- <div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div> -->
+			</div>
+			<div class="card-body">
+				<form #loginForm="ngForm"  (ngSubmit)="login()">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<input type="text" class="form-control" name="loginId"
+						placeholder="Login ID"
+						required
+						[(ngModel)]="model.loginId">
+						</div>
+						
+
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+							<input type="password" class="form-control" name="password"
+						placeholder="Password"
+						required
+						[(ngModel)]="model.password">
+						</div>
+						<div class='invalid-feedback'>Please enter Password</div>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn float-right login_btn" [disabled]="!loginForm.valid">Login</button>
+					</div>
+				</form>
+				
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a routerLink='/register'>Sign Up here !!</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="javascript:void(0)" (click)='openModal()'>Forgot your password?</a>
+				</div>
+			</div>
+		 </div>
+	</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+
+<!-- <div class="wrapper fadeInDown">
+  <div id="formContent"> -->
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <!-- <div class="fadeIn first p-3 bg-color">
+      <h2 style="color:white">Login</h2>
+    </div> -->
+
+    <!-- Login Form -->
+    <!-- <form class="mt-2" #loginForm="ngForm"  (ngSubmit)="login()">
+      <input type="text" id="login" class="fadeIn second form-control" name="loginId" placeholder="login" required
+      [(ngModel)]="model.loginId">
+      <input type="password" id="password" class="fadeIn third form-control" name="password" placeholder="password" required [(ngModel)]="model.password"> -->
+      <!-- <input type="submit" class="fadeIn fourth" [disabled]="!loginForm.valid" value="Login" > -->
+	  <!-- <input type="submit" [disabled]="!loginForm.valid" value="Login" >
+
+    </form> -->
+
+    <!-- Remind Passowrd -->
+    <!-- <div id="formFooter">
+      <a class="underlineHover" href="javascript:void(0)" (click)='openModal()'>Forgot Password?</a>
+    </div>
+
+  </div>
+</div> -->

@@ -1,0 +1,36 @@
+<!-- <ng-container>
+    <form>
+        <h1 mat-dialog-title style="background-color: #003768;color: white;" class="pop-title text-center">Edit Tweet</h1>
+        <mat-dialog-content class="mat-typography mar-0">
+            <div class=""><strong>Let's Tweet</strong></div>
+            <div class="row">
+                <div class="col-md-12"><textarea style="width:100%;" maxlength="144" [(ngModel)]="tweetData"></textarea>
+    
+                </div> -->
+<!-- <div class="col">
+                    <button class="btn btn-primary f-right" [disabled]="tweetData.length==0 || tweetData==null || tweetData.trim()==''" (click)="editTweet()">Post</button>
+                </div> -->
+<!-- </div>
+        </mat-dialog-content>
+    </form>
+    <mat-dialog-actions align="center" class="pad-10 heightset">
+        <button type="submit" class="btn btn-primary text-center f-right" [disabled]="tweetData.length==0 || tweetData==null || tweetData.trim()==''" (click)="editTweet()">Update Tweet</button>
+    </mat-dialog-actions>
+
+</ng-container> -->
+
+<h1 mat-dialog-title style="background-color: #003768;color: white;" class="pop-title text-center">Edit Tweet</h1>
+<div class="ml-4 mr-4">
+    <div class=""><strong>Edit Tweet</strong></div>
+    <div class="row">
+        <div class="col-md-12"><textarea style="width:100%;" id="tweetText" maxlength="144"
+                [(ngModel)]="tweetData"></textarea>
+
+        </div>
+        <div class="col">
+            <button class="btn btn-primary f-right"
+                [disabled]="tweetData.length==0 || tweetData==null || tweetData.trim()==''"
+                (click)="editTweet()" mat-dialog-close='true'>Post</button>
+        </div>
+    </div>
+</div>
